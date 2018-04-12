@@ -4,4 +4,8 @@
 <% end %>
 </ul>
 <br>
+<% if !@artist %>
+<%= link_to "Add New Song", new_song_path %>
+<% else %>
 <%= link_to "Add New Song", new_artist_song_path(@artist) %>
+<% end %>
